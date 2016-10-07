@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SpriteFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" CssFileName="../images" ImageName="img" IsPhone="false" xmlns="CssSprite">
+  <SpriteList>
+    <Sprite Path="热销榜.png" LocationX="0" LocationY="0" />
+    <Sprite Path="堂食.png" LocationX="159" LocationY="0" />
+    <Sprite Path="外卖.png" LocationX="318" LocationY="0" />
+    <Sprite Path="点评.png" LocationX="477" LocationY="0" />
+    <Sprite Path="会员中心.png" LocationX="636" LocationY="0" />
+    <Sprite Path="积分兑换.png" LocationX="795" LocationY="0" />
+  </SpriteList>
+</SpriteFile>

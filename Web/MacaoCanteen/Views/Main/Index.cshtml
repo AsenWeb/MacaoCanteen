@@ -1,0 +1,116 @@
+﻿@{
+    Layout = null;
+    ViewBag.Title = "Index";
+}
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet/less" type="text/css" href="../../Content/src/Main.less?12" />
+    <link rel="stylesheet/less" type="text/css" href="../../Content/src/TopBar.less?12" />
+    <link rel="stylesheet/less" type="text/css" href="../../Content/src/Banner.less?12" />
+     <link href="../../Content/css/styles.css?3" rel="stylesheet" type="text/css" />
+    <script src="../../Content/src/less.2.5.min.js" type="text/javascript"></script>
+   
+    <title>Index</title>
+    </head>
+    <body>
+ 
+
+
+        <div class="content" style="  position:relative; top:0px; margin-left:auto; margin-right:auto;">
+        <div class="topbar-noreturn">
+            <div class="btn-right">
+                <img src="../../Content/img/餐饮菜单(2).png" />
+                
+            </div>
+            <img src="../../Content/img/logo.png" />
+        </div>
+        <div class="search" >
+        <div></div>
+            <input type="text"  style=" background-image:url('Content/img/Index/搜索(2).png'); padding-left:36px;  background-repeat:no-repeat; border:0px; width:100%; height:35px;" placeholder="搜索"  />
+        </div>
+
+	    <div class="slider">
+	      <ul>
+          
+	        <li><a href="http://sc.chinaz.com" target="_blank"><img src="../../Content/img/Index/banner.jpg" /></a></li>
+		    <li><a href="http://sc.chinaz.com" target="_blank"><img src="../../Content/img/Index/banner2.jpg" /></a></li>
+
+	      </ul>
+	    </div>
+
+
+
+        <div class="menu" style="  padding-left:5px; padding-right:5px;">
+            <div style=" margin-top:12px; width:33%; float:left; position:relative; top:0px;">
+            <a
+             style="  background-position:center; display:block; margin-left:auto; margin-right:auto;  width:80px; height:80px; background-size:100% 100%;  background-image:url('Content/img/Index/堂食.png')"
+            >
+            
+            </a>
+            <div style="    font-family:微软雅黑;  font-size:12px; position:relative;   text-align:center; bottom:-2px;"> 堂食</div>
+            </div>
+
+            <div style=" margin-top:12px; width:33%; float:left; position:relative; top:0px;">
+            <a
+             style="  background-position:center; display:block; margin-left:auto; margin-right:auto;  width:80px; height:80px; background-size:100% 100%;  background-image:url('Content/img/Index/外卖.png')"
+            >
+            
+            </a>
+            <div style="    font-family:微软雅黑;  font-size:12px; position:relative;   text-align:center; bottom:-2px;"> 外卖</div>
+            </div>
+
+
+            <div style=" margin-top:12px; width:33%; float:left; position:relative; top:0px;">
+            <a
+             style="  background-position:center; display:block; margin-left:auto; margin-right:auto;  width:80px; height:80px; background-size:100% 100%;  background-image:url('Content/img/Index/热销榜.png')"
+            >
+            
+            </a>
+            <div style="    font-family:微软雅黑;  font-size:12px; position:relative;   text-align:center; bottom:-2px;"> 热销榜</div>
+            </div>
+
+            <div style=" margin-top:12px; width:33%; float:left; position:relative; top:0px;">
+            <a
+             style="  background-position:center; display:block; margin-left:auto; margin-right:auto;  width:80px; height:80px; background-size:100% 100%;  background-image:url('Content/img/Index/会员中心.png')"
+            >
+            
+            </a>
+            <div style="    font-family:微软雅黑;  font-size:12px; position:relative;   text-align:center; bottom:-2px;"> 会员中心</div>
+            </div>
+
+            <div style=" margin-top:12px; width:33%; float:left; position:relative; top:0px;">
+            <a
+             style="  background-position:center; display:block; margin-left:auto; margin-right:auto;  width:80px; height:80px; background-size:100% 100%;  background-image:url('Content/img/Index/积分兑换.png')"
+            >
+            
+            </a>
+            <div style="    font-family:微软雅黑;  font-size:12px; position:relative;   text-align:center; bottom:-2px;"> 积分兑换</div>
+            </div>
+            <div style=" margin-top:12px; width:33%; float:left; position:relative; top:0px;">
+            <a
+             style="  background-position:center; display:block; margin-left:auto; margin-right:auto;  width:80px; height:80px; background-size:100% 100%;  background-image:url('Content/img/Index/点评.png')"
+            >
+            
+            </a>
+            <div style="    font-family:微软雅黑;  font-size:12px; position:relative;   text-align:center; bottom:-2px;"> 点评</div>
+            </div>
+ 
+
+            @*<img src="../../Content/img/Index/堂食.png" width="70" />
+            <img src="../../Content/img/Index/外卖.png" width="70" />*@
+        </div>
+
+        </div>
+       
+    <script src="../../Scripts/Jquery2.0.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/yxMobileSlider.js" type="text/javascript"></script>
+    <script>
+        $(".slider").yxMobileSlider({ width: 800, height: 350, during: 10000 })
+    </script>
+
+
+    </body>
+</html>
+
+
