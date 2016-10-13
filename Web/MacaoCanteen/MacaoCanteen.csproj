@@ -61,6 +61,9 @@
   <ItemGroup>
     <Compile Include="Controllers\DineController.cs" />
     <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\ReviewController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -68,19 +71,44 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\src\control\ImgList.less" />
+    <None Include="Content\src\control\Banner.less" />
+    <None Include="Content\src\control\Form.less" />
+    <None Include="Content\src\control\Item.less" />
+    <None Include="Content\src\control\DataItem.less" />
+    <None Include="Content\src\control\Tips.less" />
     <None Include="Content\src\global\Main.less" />
+    <None Include="Content\src\page\Dine-Detial.less" />
+    <None Include="Content\src\page\Master.less" />
+    <None Include="Content\src\page\Order.less" />
+    <None Include="Content\src\page\Address.less" />
+    <None Include="Content\src\page\Address-Edit.less" />
+    <None Include="Content\src\page\User-Order.less" />
+    <None Include="Content\src\page\User-OrderDetial.less" />
+    <None Include="Content\src\page\User.less" />
+    <None Include="Content\src\page\User-Point.less" />
     <None Include="Content\src\Share.less" />
     <None Include="Content\src\page\Index.less" />
     <None Include="Content\src\control\TopBar.less" />
     <Content Include="Content\css\styles.css" />
     <None Include="Content\css\index.less" />
     <Content Include="Content\img\174111bfzxgr6gee6uf6wg.jpg" />
+    <Content Include="Content\img\Dine\pisa.jpg" />
     <Content Include="Content\img\Dine\下午茶.jpg" />
     <Content Include="Content\img\Dine\下午茶（2）.jpg" />
+    <Content Include="Content\img\Dine\关闭.png" />
+    <Content Include="Content\img\Dine\减.png" />
+    <Content Include="Content\img\Dine\删除.png" />
+    <Content Include="Content\img\Dine\加.png" />
     <Content Include="Content\img\Dine\午市.jpg" />
     <Content Include="Content\img\Dine\台式.jpg" />
     <Content Include="Content\img\Dine\日式.jpg" />
+    <Content Include="Content\img\Dine\时间.png" />
     <Content Include="Content\img\Dine\晚市.jpg" />
+    <Content Include="Content\img\Dine\暂无订单-线框.png" />
+    <Content Include="Content\img\Dine\暂无订单.png" />
+    <Content Include="Content\img\Dine\箭头.png" />
+    <Content Include="Content\img\Dine\订单已下单.png" />
+    <Content Include="Content\img\Dine\购物车.png" />
     <Content Include="Content\img\Index\banner.jpg" />
     <Content Include="Content\img\Index\banner2.jpg" />
     <Content Include="Content\img\Index\menu.png" />
@@ -94,15 +122,17 @@
     <Content Include="Content\img\Index\热销榜.png" />
     <Content Include="Content\img\Index\积分兑换.png" />
     <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\pic.jpg" />
+    <Content Include="Content\img\User\QCode.png" />
+    <Content Include="Content\img\User\兑换.png" />
+    <Content Include="Content\img\User\收货地址.png" />
+    <Content Include="Content\img\User\点评.png" />
+    <Content Include="Content\img\User\订单.png" />
     <Content Include="Content\img\返回.png" />
     <Content Include="Content\img\餐饮菜单%282%29.png" />
     <None Include="Content\src\control\Menu.less" />
     <None Include="Content\src\page\Dine.less" />
-    <Content Include="Content\src\page\Hot.css" />
     <Content Include="Content\src\page\Points.css" />
-    <Content Include="Content\src\page\Reviews.css" />
-    <Content Include="Content\src\page\TakeOut.css" />
-    <Content Include="Content\src\page\User.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\Jquery2.0.min.js" />
     <Content Include="Content\src\less.2.5.min.js" />
@@ -121,6 +151,15 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Main\Index.cshtml" />
     <Content Include="Views\Dine\Index.cshtml" />
+    <Content Include="Views\Dine\Detial.cshtml" />
+    <Content Include="Views\Order\Create.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Address.cshtml" />
+    <Content Include="Views\User\AddressEdit.cshtml" />
+    <Content Include="Views\User\Order.cshtml" />
+    <Content Include="Views\User\OrderDetial.cshtml" />
+    <Content Include="Views\User\Point.cshtml" />
+    <Content Include="Views\Review\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

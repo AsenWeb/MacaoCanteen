@@ -1,0 +1,126 @@
+﻿@{
+    ViewBag.Title = "Detial";   
+}
+@section CSS{
+    <link rel="stylesheet/less" type="text/css" href="@Url.Content("~/Content/src/page/Dine-Detial.less?13")" />
+}
+    <!--标题栏-->
+    <div class="topbar-button">
+        <div class="btn-left">
+            <a href="@Url.Action("Index","Main")"> <img src="@Url.Content("~/Content/img/返回.png")" /></a>
+        </div>
+      @*<div class="btn-right">
+            <a href="@Url.Action("Index","Main")"> <img src="@Url.Content("~/Content/img/餐饮菜单(2).png")" /></a>
+        </div>
+        <div style=" line-height:0px; font-size:0.9em; border-radius:50px;  position:absolute; top:10px; right:22px; width:10px; height:10px; background-color:Red;" class="btn-count">
+          
+        </div>*@
+        午市
+    </div> 
+
+    <!--搜索-->
+    <div>
+        <input class="search" type="text"  style=" background-image:url('@Url.Content("~/Content/img/Index/搜索(2).png")');" placeholder="搜索你想吃的午市食品"  />
+    </div>            
+         
+    <!--Banner-->     
+    <div class="banner" >
+        <div class="tip" >
+            午市<br/>Afternoon
+        </div>
+        <img src="@Url.Content("~/Content/img/Dine/午市.jpg")" />
+    </div>    
+
+    <div class="item" >
+        午市菜单
+    </div>
+
+    <div class="item-list" >
+        <div class="select">饮品</div>
+        <div>热饮</div>
+        <div>超级小食</div>    
+        <div>精品小炒</div>
+        <div>超级披萨</div>
+        <div>沙拉</div>          
+        <div style=" clear:both; float:none; width:0px; border:0px;"></div>
+    </div>
+   
+  
+    <!--餐单数据绑定-->
+    <div class="data-item-imglist">
+        <div>
+            <div class="pic">
+                <img src="@Url.Content("~/Content/img/Dine/pisa.jpg")" />
+                <div>
+                    夏威夷披萨
+                </div>
+            </div>
+            <div class="detial">
+                <div class="price">售价：¥100</div>
+                <div class="control" >
+                    <img width="32" src="@Url.Content("~/Content/img/Dine/减.png")" />
+                    <img width="32" src="@Url.Content("~/Content/img/Dine/加.png")" />
+                </div> 
+            </div>
+        </div>
+
+
+        <div>
+            <div class="pic">
+                <img src="@Url.Content("~/Content/img/Dine/pisa.jpg")" />
+                <div>
+                    夏威夷披萨
+                </div>
+            </div>
+            <div class="detial">
+                <div class="price">售价：¥100</div>
+                <div class="control" >
+                    <img width="32" src="@Url.Content("~/Content/img/Dine/加.png")" />
+                </div> 
+            </div>
+        </div>     
+    </div>
+        
+    <div style=" clear:both;"></div>
+
+    
+    <!--购物车菜单-->
+    <div class="menu-bottom">
+        <div class="count">
+            13
+        </div>
+        <div class="shopcar">
+            <img src="@Url.Content("~/Content/img/Dine/购物车.png?3")" height="38" />
+        </div>
+        <div class="price">
+            暂无选择
+        </div>
+        <div class="sure" >
+            确认下单
+        </div>
+    </div>
+
+    <!--菜单选项遮挡-->
+    <div class="mask"></div>
+
+    <!--菜单选项修改-->
+    <div class="item-selected">
+        <img class="close" width="24" style=" position:absolute; right:8px; top:5px;"  src="@Url.Content("~/Content/img/Dine/关闭.png?3")" />
+        <div class="item" style=" margin-top:0px; ">
+            已选择菜单
+        
+        </div>
+
+        <div class="data-plane">
+            <div class="data-item">
+                <div class="tip">爆炒青椒</div>
+                <div class="numpick">
+                         <img width="20" src="@Url.Content("~/Content/img/Dine/减.png")" />
+                         <div class="num"> 13</div>
+                         <img width="20" src="@Url.Content("~/Content/img/Dine/加.png")" />
+                </div>
+                <div class="price" >¥10</div>
+                <div style=" clear:both; float:none;"></div>
+            </div>
+        </div>    
+    </div>

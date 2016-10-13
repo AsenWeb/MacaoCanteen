@@ -1,12 +1,17 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet/less" type="text/css" href="@Url.Content("~/Content/src/page/Master.less?1")" />
+    @RenderSection("CSS", false)
+    <script src="@Url.Content("~/Content/src/less.2.5.min.js")" type="text/javascript"></script>
     <title>@ViewBag.Title</title>
-    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
-    <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
 </head>
 
 <body>
-    @RenderBody()
+    <div class="content">
+        @RenderBody()
+    </div>
+    @RenderSection("Js", false)
 </body>
 </html>

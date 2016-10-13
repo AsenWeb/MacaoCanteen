@@ -6,14 +6,20 @@
 	margin:0px;
     background-color:#eeeeee;
 	font-family:微软雅黑;
+	font-size:12px;
 }
 
 .content{
-	over-flow:hidden;
+    @media screen {
+		@media (min-width:@MaxWidth) {
+		  background-color: white;
+		}
+	}
 	max-width:@MaxWidth;
 	margin-top:44px;
 	position:relative; 
 	top:0px; 
+	height:100%;
 	margin-left:auto; 
 	margin-right:auto;
 }

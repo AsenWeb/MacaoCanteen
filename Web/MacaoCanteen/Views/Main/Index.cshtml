@@ -1,89 +1,70 @@
 ﻿@{
-    Layout = null;
     ViewBag.Title = "Index";
 }
-<!DOCTYPE HTML>
-<html>
-    <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-     <link rel="stylesheet/less" type="text/css" href="@Url.Content("~/Content/src/page/Index.less?3")" />
-@*    
-    <link rel="stylesheet/less" type="text/css" href="@Url.Content("~/Content/src/Main.less")" />
-    <link rel="stylesheet/less" type="text/css" href="@Url.Content("~/Content/src/TopBar.less")" />
-    <link rel="stylesheet/less" type="text/css" href="@Url.Content("~/Content/src/Banner.less")" />
-    <link rel="stylesheet/less" type="text/css" href="@Url.Content("~/Content/src/Menu.less")" />*@
+
+@section CSS{
+    <link rel="stylesheet/less" type="text/css" href="@Url.Content("~/Content/src/page/Index.less?6")" />
     <link href="@Url.Content("~/Content/css/styles.css")" rel="stylesheet" type="text/css" />
-    <script src="@Url.Content("~/Content/src/less.2.5.min.js")" type="text/javascript"></script>
-   
-    <title>Index</title>
-    </head>
-    <body>
- 
+}
 
+    <!--标题栏-->
+    <div class="topbar-noreturn">
+        @*<div class="btn-right">
+            <img src="@Url.Content("~/Content/img/餐饮菜单(2).png")" />
+        </div>*@
+        <img src="@Url.Content("~/Content/img/logo.png")" />
+    </div>
 
-        <div class="content" >
-        <!--标题栏-->
-        <div class="topbar-noreturn">
-            <div class="btn-right">
-                <img src="../Content/img/餐饮菜单(2).png" />
-                
-            </div>
-            <img src="../Content/img/logo.png" />
-        </div>
+    <!--搜索-->
+    <div>
+        <input class="search" type="text"  style=" background-image:url('@Url.Content("~/Content/img/Index/搜索(2).png")');" placeholder="搜索"  />
+    </div>
 
-        <!--搜索-->
-        <div>
-            <input class="search" type="text"  style=" background-image:url('../Content/img/Index/搜索(2).png');" placeholder="搜索"  />
-        </div>
-
-        <!--Banner-->
-	    <div class="slider">
-	      <ul>
+    <!--Banner-->
+    <div class="slider">
+	    <ul>
           
-	        <li><a href="http://sc.chinaz.com" target="_blank"><img src="../Content/img/Index/banner.jpg" /></a></li>
-		    <li><a href="http://sc.chinaz.com" target="_blank"><img src="../Content/img/Index/banner2.jpg" /></a></li>
+	    <li><a href="http://sc.chinaz.com" target="_blank"><img src="@Url.Content("~/Content/img/Index/banner.jpg")" /></a></li>
+	    <li><a href="http://sc.chinaz.com" target="_blank"><img src="@Url.Content("~/Content/img/Index/banner2.jpg")" /></a></li>
 
-	      </ul>
-	    </div>
+	    </ul>
+    </div>
 
-        <!--菜单-->
-        <div class="menu-img">
-            <div>
-                <a href="@Url.Action("Index","Dine")" style="background-image:url('../Content/img/Index/堂食.png')"></a>
-                <div class="tip">堂食</div>
-            </div>
-            <div>
-                <a style="background-image:url('../Content/img/Index/外卖.png')"></a>
-                <div class="tip">外卖</div>
-            </div>
-            <div>
-                <a style="background-image:url('../Content/img/Index/热销榜.png')"></a>
-                <div class="tip">热销榜</div>
-            </div>
-            <div>
-                <a style="background-image:url('../Content/img/Index/会员中心.png')"></a>
-                <div class="tip">会员中心</div>
-            </div>
-            <div>
-                <a style="background-image:url('../Content/img/Index/积分兑换.png')"></a>
-                <div class="tip">积分兑换</div>
-            </div>
-            <div>
-                <a style="background-image:url('../Content/img/Index/点评.png')"></a>
-                <div class="tip">点评</div>
-            </div>
+    <!--菜单-->
+    <div class="menu-img">
+        <div>
+            <a href="@Url.Action("Index","Dine")" style="background-image:url('@Url.Content("~/Content/img/Index/堂食.png")')"></a>
+            <div class="tip">堂食</div>
         </div>
-
+        <div>
+            <a style="background-image:url('@Url.Content("~/Content/img/Index/外卖.png")')"></a>
+            <div class="tip">外卖</div>
         </div>
-       
+        <div>
+            <a style="background-image:url('@Url.Content("~/Content/img/Index/热销榜.png")')"></a>
+            <div class="tip">热销榜</div>
+        </div>
+        <div>
+            <a style="background-image:url('@Url.Content("~/Content/img/Index/会员中心.png")')"></a>
+            <div class="tip">会员中心</div>
+        </div>
+        <div>
+            <a style="background-image:url('@Url.Content("~/Content/img/Index/积分兑换.png")')"></a>
+            <div class="tip">积分兑换</div>
+        </div>
+        <div>
+            <a style="background-image:url('@Url.Content("~/Content/img/Index/点评.png")')"></a>
+            <div class="tip">点评</div>
+        </div>
+        <div style=" clear:both; float:none;"></div>
+    </div>
+
+
+@section Js{
     <script src="@Url.Content("~/Scripts/Jquery2.0.min.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/yxMobileSlider.js")" type="text/javascript"></script>
     <script type="text/javascript">
-        $(".slider").yxMobileSlider({ width: 800, height: 350, during: 10000 })
+        $(".slider").yxMobileSlider({ width: 800, height: 350, during: 10000 });
     </script>
-
-
-    </body>
-</html>
-
+}
 

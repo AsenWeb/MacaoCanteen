@@ -1,75 +1,43 @@
 ﻿@{
-    ViewBag.Title = "Dine";
+    ViewBag.Title = "Dine-Index";
 }
-<!DOCTYPE HTML>
-<html>
-    <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <link rel="stylesheet/less" type="text/css" href="@Url.Content("~/Content/src/page/Dine.less?3")" />
 
-    <script src="@Url.Content("~/Content/src/less.2.5.min.js")" type="text/javascript"></script>
-    <title>DineIndex</title>
-    </head>
-    <body>
-        <div class="content">
-            <div class="topbar-return" style=" clear:both; z-index:5;">
-                <div class="btn-left">
-                    <a href="@Url.Action("Index","Main")"> <img src="../Content/img/返回.png" /></a>
-                </div>
-                堂食
-            </div>        
-            <div style=" clear:both;"></div>
-            <div style="  padding-bottom:10px;">
-            <div class="img-list" style="  padding-top:10px;" >
-                <div style=" box-shadow: 1px 1px 2px; position:relative; top:0px; border-radius:5px; background-color: White; width:94%; margin-left:auto; margin-right:auto;  height:150px; overflow:hidden;">
-                @*<div style=" width:100%; height:100px; background-repeat:no-repeat;  background-size:80% 80%; background-image:url('../Content/img/Dine/午市.jpg'); max-width:100%;border-radius:5px; height:150px;" ></div>*@
-                    <img src="../Content/img/Dine/午市.jpg" style=" max-width:100%;" />
-                <div style=" border-radius:5px; width:100%; position:absolute; bottom:0px;  height:60px;  background: linear-gradient(transparent,black);"></div>
-                <div style="  letter-spacing:4px; position:absolute; right:10px; bottom:5px; font-weight:bold; color:White; font-size:32px; ">午市</div>
-                </div>
-            </div>
-
-            <div class="img-list" style="  padding-top:10px;" >
-                <div style="  box-shadow: 1px 1px 2px; position:relative; top:0px; border-radius:5px; background-color: White; width:94%; margin-left:auto; margin-right:auto;  height:150px; overflow:hidden;">
-                @*<div style=" width:100%; height:100px; background-repeat:no-repeat;  background-size:80% 80%; background-image:url('../Content/img/Dine/午市.jpg'); max-width:100%;border-radius:5px; height:150px;" ></div>*@
-                    <img src="../Content/img/Dine/下午茶（2）.jpg" style=" max-width:100%;" />
-                <div style=" border-radius:5px; width:100%; position:absolute; bottom:0px;  height:60px;  background: linear-gradient(transparent,black);"></div>
-                <div style="  letter-spacing:4px; position:absolute; right:10px; bottom:5px; font-weight:bold; color:White; font-size:32px; ">下午茶</div>
-                </div>
-            </div>
-
-            <div class="img-list" style="  padding-top:10px;" >
-                <div style="  box-shadow: 1px 1px 2px; position:relative; top:0px; border-radius:5px; background-color: White; width:94%; margin-left:auto; margin-right:auto;  height:150px; overflow:hidden;">
-                @*<div style=" width:100%; height:100px; background-repeat:no-repeat;  background-size:80% 80%; background-image:url('../Content/img/Dine/午市.jpg'); max-width:100%;border-radius:5px; height:150px;" ></div>*@
-                    <img src="../Content/img/Dine/晚市.jpg" style=" max-width:100%;" />
-                <div style=" border-radius:5px; width:100%; position:absolute; bottom:0px;  height:60px;  background: linear-gradient(transparent,black);"></div>
-                <div style="  letter-spacing:4px; position:absolute; right:10px; bottom:5px; font-weight:bold; color:White; font-size:32px; ">晚市</div>
-                </div>
-            </div>
-
-            <div class="img-list" style="  padding-top:10px;" >
-                <div style="  box-shadow: 1px 1px 2px; position:relative; top:0px; border-radius:5px; background-color: White; width:94%; margin-left:auto; margin-right:auto;  height:150px; overflow:hidden;">
-                @*<div style=" width:100%; height:100px; background-repeat:no-repeat;  background-size:80% 80%; background-image:url('../Content/img/Dine/午市.jpg'); max-width:100%;border-radius:5px; height:150px;" ></div>*@
-                    <img src="../Content/img/Dine/日式.jpg" style=" max-width:100%;" />
-                <div style=" border-radius:5px; width:100%; position:absolute; bottom:0px;  height:60px;  background: linear-gradient(transparent,black);"></div>
-                <div style="  letter-spacing:4px; position:absolute; right:10px; bottom:5px; font-weight:bold; color:White; font-size:32px; ">日式</div>
-                </div>
-            </div>
-
-            <div class="img-list" style="  padding-top:10px;" >
-                <div style="  box-shadow: 1px 1px 2px; position:relative; top:0px; border-radius:5px; background-color: White; width:94%; margin-left:auto; margin-right:auto;  height:150px; overflow:hidden;">
-                @*<div style=" width:100%; height:100px; background-repeat:no-repeat;  background-size:80% 80%; background-image:url('../Content/img/Dine/午市.jpg'); max-width:100%;border-radius:5px; height:150px;" ></div>*@
-                    <img src="../Content/img/Dine/台式.jpg" style=" max-width:100%;" />
-                <div style=" border-radius:5px; width:100%; position:absolute; bottom:0px;  height:60px;  background: linear-gradient(transparent,black);"></div>
-                <div style="  letter-spacing:4px; position:absolute; right:10px; bottom:5px; font-weight:bold; color:White; font-size:32px; ">台式</div>
-                </div>
-            </div>
-            </div>
-
-
+@section CSS{
+    <link rel="stylesheet/less" type="text/css" href="@Url.Content("~/Content/src/page/Dine.less?7")" />
+}
+    <!--标题栏-->
+    <div class="topbar-return" >
+        <div class="btn-left">
+            <a href="@Url.Action("Index","Main")"> <img src="@Url.Content("~/Content/img/返回.png")" /></a>
         </div>
+        堂食
+    </div>  
 
-
-    </body>
-</html>
-
+    <!--搜索-->
+    <div>
+        <input class="search" type="text"  style=" background-image:url('@Url.Content("~/Content/img/Index/搜索(2).png")');" placeholder="搜索"  />
+    </div>            
+                  
+    <!--按钮选择-->
+    <div class="img-list">
+        <div >
+            <img src="@Url.Content("~/Content/img/Dine/午市.jpg")" />
+            <div class="title">午市</div>
+        </div>
+        <div >
+            <img src="@Url.Content("~/Content/img/Dine/下午茶（2）.jpg")" />
+            <div class="title">下午茶</div>
+        </div>
+        <div >
+            <img src="@Url.Content("~/Content/img/Dine/晚市.jpg")" />
+            <div class="title">晚市</div>
+        </div>
+        <div >
+            <img src="@Url.Content("~/Content/img/Dine/日式.jpg")" />
+            <div class="title">日式</div>
+        </div>
+        <div >
+            <img src="@Url.Content("~/Content/img/Dine/台式.jpg")" />
+            <div class="title">台式</div>
+        </div>
+    </div>

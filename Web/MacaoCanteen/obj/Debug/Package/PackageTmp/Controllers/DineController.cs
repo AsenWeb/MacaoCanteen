@@ -16,5 +16,16 @@ namespace MacaoCanteen.Controllers
             return View();
         }
 
+        public ActionResult Detial()
+        {
+            return View();
+        }
+
+        public ActionResult MenuComplex()
+        {
+            return View();
+        }
+
+
     }
 }
