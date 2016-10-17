@@ -1,0 +1,7 @@
+E:\AsenWork\MyProject\MacaoCanteen\TicketPrint\TicketPrint\bin\Debug\TicketPrint.exe
+E:\AsenWork\MyProject\MacaoCanteen\TicketPrint\TicketPrint\bin\Debug\TicketPrint.pdb
+E:\AsenWork\MyProject\MacaoCanteen\TicketPrint\TicketPrint\obj\x86\Debug\TicketPrint.Properties.Resources.resources
+E:\AsenWork\MyProject\MacaoCanteen\TicketPrint\TicketPrint\obj\x86\Debug\TicketPrint.P_Server.resources
+E:\AsenWork\MyProject\MacaoCanteen\TicketPrint\TicketPrint\obj\x86\Debug\TicketPrint.csproj.GenerateResource.Cache
+E:\AsenWork\MyProject\MacaoCanteen\TicketPrint\TicketPrint\obj\x86\Debug\TicketPrint.exe
+E:\AsenWork\MyProject\MacaoCanteen\TicketPrint\TicketPrint\obj\x86\Debug\TicketPrint.pdb

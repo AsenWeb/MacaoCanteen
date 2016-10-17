@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.WebPages" />
     <Reference Include="System.Web.Helpers" />
@@ -59,6 +62,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\BgController.cs" />
     <Compile Include="Controllers\DineController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
@@ -66,6 +70,11 @@
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MacaoCanteen.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MacaoCanteen.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -82,10 +91,12 @@
     <None Include="Content\src\page\Order.less" />
     <None Include="Content\src\page\Address.less" />
     <None Include="Content\src\page\Address-Edit.less" />
+    <None Include="Content\src\page\Review.less" />
     <None Include="Content\src\page\User-Order.less" />
     <None Include="Content\src\page\User-OrderDetial.less" />
     <None Include="Content\src\page\User.less" />
     <None Include="Content\src\page\User-Point.less" />
+    <None Include="Content\src\page\Review-Add.less" />
     <None Include="Content\src\Share.less" />
     <None Include="Content\src\page\Index.less" />
     <None Include="Content\src\control\TopBar.less" />
@@ -123,6 +134,11 @@
     <Content Include="Content\img\Index\积分兑换.png" />
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\pic.jpg" />
+    <Content Include="Content\img\pic2.jpg" />
+    <Content Include="Content\img\pic3.jpg" />
+    <Content Include="Content\img\Review\评价.png" />
+    <Content Include="Content\img\Review\评价星星-黄.png" />
+    <Content Include="Content\img\Review\评价星星.png" />
     <Content Include="Content\img\User\QCode.png" />
     <Content Include="Content\img\User\兑换.png" />
     <Content Include="Content\img\User\收货地址.png" />
@@ -132,7 +148,6 @@
     <Content Include="Content\img\餐饮菜单%282%29.png" />
     <None Include="Content\src\control\Menu.less" />
     <None Include="Content\src\page\Dine.less" />
-    <Content Include="Content\src\page\Points.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\Jquery2.0.min.js" />
     <Content Include="Content\src\less.2.5.min.js" />
@@ -160,10 +175,14 @@
     <Content Include="Views\User\OrderDetial.cshtml" />
     <Content Include="Views\User\Point.cshtml" />
     <Content Include="Views\Review\Index.cshtml" />
+    <Content Include="Views\Review\AddReview.cshtml" />
+    <EntityDeploy Include="Models\MacaoCanteen.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MacaoCanteen.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Views\Bg\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

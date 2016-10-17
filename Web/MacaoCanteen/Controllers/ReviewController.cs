@@ -16,5 +16,10 @@ namespace MacaoCanteen.Controllers
             return View();
         }
 
+        public ActionResult AddReview()
+        {
+            return View();
+        }
+
     }
 }

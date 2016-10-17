@@ -95,16 +95,18 @@
         <div class="price">
             暂无选择
         </div>
-        <div class="sure" >
-            确认下单
-        </div>
+        <a href="@Url.Action("Create", "Order")">
+            <div class="sure" >
+               确认下单
+            </div>
+        </a>
     </div>
 
     <!--菜单选项遮挡-->
     <div class="mask"></div>
 
     <!--菜单选项修改-->
-    <div class="item-selected">
+    @*<div class="item-selected">
         <img class="close" width="24" style=" position:absolute; right:8px; top:5px;"  src="@Url.Content("~/Content/img/Dine/关闭.png?3")" />
         <div class="item" style=" margin-top:0px; ">
             已选择菜单
@@ -123,4 +125,4 @@
                 <div style=" clear:both; float:none;"></div>
             </div>
         </div>    
-    </div>
+    </div>*@
