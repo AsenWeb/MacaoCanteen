@@ -5,3 +5,8 @@ E:\AsenWork\MyProject\MacaoCanteen\TicketPrint\TicketPrint\obj\x86\Debug\TicketP
 E:\AsenWork\MyProject\MacaoCanteen\TicketPrint\TicketPrint\obj\x86\Debug\TicketPrint.csproj.GenerateResource.Cache
 E:\AsenWork\MyProject\MacaoCanteen\TicketPrint\TicketPrint\obj\x86\Debug\TicketPrint.exe
 E:\AsenWork\MyProject\MacaoCanteen\TicketPrint\TicketPrint\obj\x86\Debug\TicketPrint.pdb
+E:\AsenWork\MyProject\MacaoCanteen\TicketPrint\TicketPrint\obj\x86\Debug\TicketPrint.P_Main.resources
+E:\AsenWork\MyProject\MacaoCanteen\TicketPrint\TicketPrint\bin\Debug\TicketPrint.exe.config
+E:\AsenWork\MyProject\MacaoCanteen\TicketPrint\TicketPrint\bin\Debug\Print.dll
+E:\AsenWork\MyProject\MacaoCanteen\TicketPrint\TicketPrint\bin\Debug\Print.pdb
+E:\AsenWork\MyProject\MacaoCanteen\TicketPrint\TicketPrint\obj\x86\Debug\TicketPrint.csprojResolveAssemblyReference.cache

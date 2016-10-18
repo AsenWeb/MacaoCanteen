@@ -15,7 +15,7 @@ namespace TicketPrint
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new P_Server());
+            Application.Run(new P_Main());
         }
     }
 }

@@ -34,7 +34,14 @@ namespace TicketPrint
         /// <param name="pd">PRINTER_DEFAULTS，这个结构保存要载入的打印机信息</param>
         /// <returns>bool</returns>
         [DllImport("winspool.Drv", EntryPoint = "OpenPrinterA", SetLastError = true, CharSet = CharSet.Auto, ExactSpelling = true, CallingConvention = CallingConvention.StdCall)]
-        public static extern bool OpenPrinter([MarshalAs(UnmanagedType.LPStr)] string szPrinter, out IntPtr hPrinter, IntPtr pd);
+        public static extern int OpenPrinter([MarshalAs(UnmanagedType.LPStr)] string szPrinter, out IntPtr hPrinter, IntPtr pd);
+
+
+
+
+
+
+
 
 
         /// <summary>
@@ -68,40 +75,61 @@ namespace TicketPrint
         /// <param name="level">1或2（仅用于win95）</param>
         /// <param name="di">包含一个DOC_INFO_1或DOC_INFO_2结构得缓冲区</param>
         /// <returns>bool 注: 在应用程序的级别并非有用。后台打印程序用它标识一个文档的开始</returns>
-        [DllImport("winspool.Drv", EntryPoint = "StartDocPrinterA", SetLastError = true, CharSet = CharSet.Auto, ExactSpelling = true, CallingConvention = CallingConvention.StdCall)]
-        public static extern bool StartDocPrinter(IntPtr hPrinter, Int32 level, [In, MarshalAs(UnmanagedType.LPStruct)] DOCINFOA di);
-        
+        [DllImport("Winspool.drv", EntryPoint = "StartDocPrinterW", SetLastError = true, CharSet = CharSet.Auto, ExactSpelling = true, CallingConvention = CallingConvention.StdCall)]
+        public static extern int StartDocPrinter(IntPtr hPrinter, Int32 level, [In, MarshalAs(UnmanagedType.LPStruct)] DOCINFOA di);
+
+        /// <summary>
+        /// StartPagePrinter 在打印作业中指定一个新页的开始 
+        /// </summary>
+        /// <param name="hPrinter">指定一个已打开的打印机的句柄（用openprinter取得）</param>
+        /// <returns>bool注:在应用程序的级别并非特别有用</returns>
         [DllImport("winspool.Drv", EntryPoint = "StartPagePrinter", SetLastError = true, ExactSpelling = true, CallingConvention = CallingConvention.StdCall)]
-        public static extern bool StartPagePrinter(IntPtr hPrinter);
+        public static extern int StartPagePrinter(IntPtr hPrinter); 
+
+
 
 
 
         private void P_Server_Load(object sender, EventArgs e)
         {
+            
+
+            //   LPTControl CurrLptCtrl=new LPTControl("LPT1");
+            //CurrLptCtrl.Open();
+            //string teststr="123456";
+            //foreach(char c in teststr){
+            //    char  LF = (char)(10); 
+            //    CurrLptCtrl.Write((c+LF).ToString());
+            //}
+
+
+            //CurrLptCtrl.Close();
+            
+
             IntPtr Print=new IntPtr();
             IntPtr PrintMes=new IntPtr();
-            bool IsOpen=OpenPrinter("GP-5890X Series",out Print,PrintMes);
+            int IsOpen=OpenPrinter("GP-5890X Series",out Print,PrintMes);
             
             int count = 0;
 
             byte[] kc =   System.Text.Encoding.ASCII.GetBytes("Asen");
 
             byte[] kc2 = System.Text.Encoding.ASCII.GetBytes("10");
-            GCHandle hObject = GCHandle.Alloc(kc, GCHandleType.Pinned);
-            GCHandle hObject2 = GCHandle.Alloc(kc2, GCHandleType.Pinned);
-            IntPtr pObject = hObject.AddrOfPinnedObject();
-            IntPtr pObject2 = hObject2.AddrOfPinnedObject();
+            //GCHandle hObject = GCHandle.Alloc(kc, GCHandleType.Pinned);
+            //GCHandle hObject2 = GCHandle.Alloc(kc2, GCHandleType.Pinned);
+            //IntPtr pObject = hObject.AddrOfPinnedObject();
+            //IntPtr pObject2 = hObject2.AddrOfPinnedObject();
 
-           DOCINFOA Df=new DOCINFOA();
-            Df.pDataType="文本";
-            Df.pDocName="测试";
-            Df.pOutputFile="什么";
-            
-            //StartDocPrinter(Print, 1, Df);
+            DOCINFOA Df = new DOCINFOA();
+            Df.pDataType = "string";
+            Df.pDocName = "测试";
+            Df.pOutputFile = null;
+            int test=StartDocPrinter(Print, 1, Df);
+            int isprint=StartPagePrinter(Print);
            
-            bool pos=StartDocPrinter(Print, 3, Df);
+            //bool pos=StartDocPrinter(Print, 3, Df);
 
-            StartPagePrinter(Print);
+            //StartPagePrinter(Print);
             bool pp=WritePrinter(Print, kc, kc.Length, out count);
             bool s= WritePrinter(Print, kc2, kc.Length, out count);
   
@@ -118,5 +146,109 @@ namespace TicketPrint
 
 
 
+
     }
+
+
+
+
+ /// <summary>
+ /// LPTControl 的摘要说明。
+ /// </summary>
+ public class LPTControl
+ {
+  private string LptStr="lpt1";
+  public LPTControl(string l_LPT_Str)
+  {
+   //
+   // TODO: 在此处添加构造函数逻辑
+   //
+   LptStr=l_LPT_Str;
+  }
+  [StructLayout(LayoutKind.Sequential)]
+   private struct OVERLAPPED
+  {
+   int Internal;
+   int InternalHigh;
+   int Offset;
+   int OffSetHigh;
+   int hEvent;
+  }
+  [DllImport("kernel32.dll")]
+  private static extern int CreateFile(
+   string lpFileName,
+   uint dwDesiredAccess,
+   int dwShareMode,
+   int lpSecurityAttributes,
+   int dwCreationDisposition,
+   int dwFlagsAndAttributes,
+   int hTemplateFile
+   );
+  [DllImport("kernel32.dll")]
+  private static extern bool WriteFile(
+   int hFile,
+   byte[] lpBuffer,
+   int nNumberOfBytesToWrite,
+   ref int lpNumberOfBytesWritten,
+   ref OVERLAPPED lpOverlapped
+   );
+  [DllImport("kernel32.dll")]
+  private static extern bool CloseHandle(
+   int hObject
+   );
+  private int iHandle;
+  public bool Open()
+  {
+   iHandle = CreateFile(LptStr, 0x40000000, 0, 0, 3, 0, 0);
+   if (iHandle != -1)
+   {
+    return true;
+   }
+   else
+   {
+    return false;
+   }
+  }
+  public bool Write(String Mystring)
+  {
+   if (iHandle != -1)
+   {
+    OVERLAPPED x = new OVERLAPPED();
+    int i = 0;
+
+byte[] mybyte = System.Text.Encoding.Default.GetBytes(Mystring);
+    bool b = WriteFile(iHandle, mybyte, mybyte.Length, ref i, ref x);
+    return b;
+   }
+   else
+   {
+    throw new Exception("不能连接到打印机!");
+   }
+  }
+
+public bool Write(byte[] mybyte)
+  {
+   if (iHandle != -1)
+   {
+    OVERLAPPED x = new OVERLAPPED();
+    int i = 0;
+    WriteFile(iHandle, mybyte, mybyte.Length,
+     ref i, ref x);
+    return true;
+   }
+   else
+   {
+    throw new Exception("不能连接到打印机!");
+   }
+  }
+  public bool Close()
+  {
+   return CloseHandle(iHandle);
+  }
+
+}
+
+
+
+
 }
