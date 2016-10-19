@@ -24,7 +24,15 @@ namespace MacaoCanteen
             routes.MapRoute(
                 "Default", // 路由名称
                 "{controller}/{action}/{id}", // 带有参数的 URL
-                new { controller = "Main", action = "Index", id = UrlParameter.Optional } // 参数默认值
+                new { controller = "Main", action = "Index", id = UrlParameter.Optional },
+                new string[]{"MacaoCanteen.controllers"}// 参数默认值
+            );
+
+            routes.MapRoute(
+                "Admin", // 路由名称
+                "{controller}/{action}/{id}", // 带有参数的 URL
+                new { controller = "Main", action = "Index", id = UrlParameter.Optional },
+                new string[] { "MacaoCanteen.controllers" }// 参数默认值
             );
 
         }
