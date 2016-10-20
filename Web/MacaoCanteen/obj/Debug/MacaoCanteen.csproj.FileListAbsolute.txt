@@ -7,3 +7,4 @@ E:\AsenWork\MyProject\MacaoCanteen\Web\MacaoCanteen\bin\MacaoCanteen.dll
 E:\AsenWork\MyProject\MacaoCanteen\Web\MacaoCanteen\bin\MacaoCanteen.pdb
 E:\AsenWork\MyProject\MacaoCanteen\Web\MacaoCanteen\obj\Debug\MacaoCanteen.dll
 E:\AsenWork\MyProject\MacaoCanteen\Web\MacaoCanteen\obj\Debug\MacaoCanteen.pdb
+E:\AsenWork\MyProject\MacaoCanteen\Web\MacaoCanteen\obj\Debug\MacaoCanteen.csprojResolveAssemblyReference.cache
