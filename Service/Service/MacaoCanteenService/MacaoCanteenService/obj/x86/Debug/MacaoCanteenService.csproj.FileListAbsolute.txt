@@ -1,0 +1,7 @@
+E:\AsenWork\MyProject\MacaoCanteen\MacaoCanteen\Service\MacaoCanteenService\MacaoCanteenService\bin\Debug\MacaoCanteenService.exe.config
+E:\AsenWork\MyProject\MacaoCanteen\MacaoCanteen\Service\MacaoCanteenService\MacaoCanteenService\bin\Debug\MacaoCanteenService.exe
+E:\AsenWork\MyProject\MacaoCanteen\MacaoCanteen\Service\MacaoCanteenService\MacaoCanteenService\bin\Debug\MacaoCanteenService.pdb
+E:\AsenWork\MyProject\MacaoCanteen\MacaoCanteen\Service\MacaoCanteenService\MacaoCanteenService\obj\x86\Debug\MacaoCanteenService.M_Main.resources
+E:\AsenWork\MyProject\MacaoCanteen\MacaoCanteen\Service\MacaoCanteenService\MacaoCanteenService\obj\x86\Debug\MacaoCanteenService.csproj.GenerateResource.Cache
+E:\AsenWork\MyProject\MacaoCanteen\MacaoCanteen\Service\MacaoCanteenService\MacaoCanteenService\obj\x86\Debug\MacaoCanteenService.exe
+E:\AsenWork\MyProject\MacaoCanteen\MacaoCanteen\Service\MacaoCanteenService\MacaoCanteenService\obj\x86\Debug\MacaoCanteenService.pdb

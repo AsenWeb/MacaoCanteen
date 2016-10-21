@@ -1,0 +1,16 @@
+打印配置：
+先开防火墙:
+服务->Windows Firewall
+共享USB热敏打印机
+
+
+
+/*
+映射USB端口到指定LPT端口:
+NET USE LPT1: \\计算机名称\打印机共享名称 /Persistent:YES
+示例:
+NET USE LPT1: \\cad118\GP5890X /Persistent:YES
+
+删除映射LPT端口:
+NET USE LPT1: /DELETE
+*/

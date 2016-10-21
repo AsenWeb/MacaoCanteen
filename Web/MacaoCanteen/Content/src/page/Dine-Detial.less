@@ -1,0 +1,78 @@
+﻿@import "../control/Form.less";
+@import "../control/Item.less?1";
+@import "../control/DataItem.less?1";
+@import "../control/Banner.less?2";
+@import "../control/Tips.less";
+@import "../control/Menu.less?3";
+
+.tips:extend(.tips){};
+.search:extend(.search){};
+.item:extend(.item){};
+.item-list:extend(.item-list){};
+.data-item-imglist:extend(.data-item-imglist){};
+.banner:extend(.banner){};
+.menu-bottom:extend(.menu-bottom){};
+
+.mask{
+    max-width:800px; 
+    position:fixed; 
+    top:0px; 
+    height:100%; 
+    background:rgba(0,0,0,0.8); 
+    width:100%; 
+    z-index:4;
+	display:none;
+
+}
+.item-selected{
+    max-width:800px;  
+    position:fixed; 
+    z-index:5; 
+    bottom:44px; 
+    min-height:40px; 
+    width:100%; 
+    height:230px;  
+    background-color:White;
+
+    .data-plane{
+        width:100%;  
+        height:200px; 
+       
+		overflow:hidden; 
+        overflow-y:scroll;
+
+        .data-item{
+                border-top:1px solid #eeeeee;   
+                margin-top:5px;  
+                padding-top:5px;
+
+                >div{
+					float:left;
+					width:30%;
+                }
+                .tip{
+					text-align:left;
+					padding-left:3%;
+                }
+                .numpick{
+					width:31%; 
+					margin-left:1%; 
+					margin-right:1%;
+					text-align:center;
+					.num{
+							display:inline-table; 
+							width:22px; 
+							position:relative; 
+							bottom:5px;
+					}
+                }
+                .price{
+					text-align:right;
+					padding-right:3%;
+                }
+
+        }
+
+    }
+}
+

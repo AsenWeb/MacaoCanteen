@@ -1,0 +1,176 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="Stylesheet" type="text/css" href="@Url.Content("~/BootStrap/dist/css/bootstrap.css?1")" />
+     <link rel="Stylesheet" type="text/css" href="@Url.Content("~/Areas/Admin/Content/css/page/master.css?1")" />
+    @RenderSection("CSS", false)
+    <title>@ViewBag.Title</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+    @*@{Html.RenderAction("Index", "Master");}*@
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid" >
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">俾利喇美食中心點餐繫統</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">俾利喇美食中心點餐繫統</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">订单</a></li>
+            <li><a href="#">设置</a></li>
+            <li><a href="#">个人信息</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            @*<input type="text" class="form-control" placeholder="Search...">*@
+          </form>
+        </div>
+      </div>
+    </nav>
+
+
+<div class="container-fluid">
+      <!--用户信息栏-->
+
+
+      <!--菜单栏-->
+      <div class="row">
+   
+        <div class="col-sm-3 col-md-2 sidebar">
+        <div class="user" >
+           <img width="80" src="@Url.Content("~/Areas/Admin/Content/img/Pic.png")" alt="Pic" class="img-circle">
+           <div>Asen</div>        
+         </div>
+
+
+          <ul class="nav nav-sidebar">
+            <li class="active">
+            <a  href="#">
+                <span  class="icon">
+                    <img  height="22"  src="@Url.Content("~/Areas/Admin/Content/img/总览.png")" />
+                </span>
+                总览
+            </a>
+
+            </li>
+
+            <li >
+            <a href="#"> 
+                <span class="icon">
+                    <img height="22"  src="@Url.Content("~/Areas/Admin/Content/img/管理员.png")" />
+                </span>
+                管理员
+            </a>
+            <ul class="sildebar-son" >
+                <li><a href="#">人员信息管理</a></li>
+            </ul>
+            </li>
+            <li>
+            <a href="#">  
+                <span  class="icon">
+                    <img height="22" src="@Url.Content("~/Areas/Admin/Content/img/堂食订单.png")" />
+                </span> 
+                堂食
+            </a>
+            <ul class="sildebar-son" >
+                <li><a href="#">堂食分类管理</a></li>
+                <li><a href="#">食品管理</a></li>
+            </ul>
+            </li>
+            <li>
+            <a href="#">
+                <span class="icon">
+                    <img height="22" src="@Url.Content("~/Areas/Admin/Content/img/外卖.png")" />
+                </span> 
+                外卖管理
+            </a>
+
+            </li>
+            <li>
+            <a href="#">
+                <span class="icon">
+                    <img height="22" src="@Url.Content("~/Areas/Admin/Content/img/订单.png")" />
+                </span> 
+                订单查询
+            </a>
+            <ul class="sildebar-son" >
+                <li><a href="#">今日订单</a></li>
+                <li><a href="#">外卖订单</a></li>
+                <li><a href="#">食堂订单</a></li>
+                <li><a href="#">所有订单</a></li>
+            </ul>
+            </li>
+
+            <li>
+            <a href="#">
+                <span class="icon">
+                  <img width="25" src="@Url.Content("~/Areas/Admin/Content/img/用户.png")" />
+                </span> 
+                会员管理
+            </a>
+            <ul class="sildebar-son" >
+                <li><a href="#">微信会员</a></li>
+            </ul>
+            </li>
+
+            <li>
+            <a href="#">
+                <span class="icon">
+                  <img width="25" src="@Url.Content("~/Areas/Admin/Content/img/设置.png")" />
+                </span> 
+                系统设置
+            </a>
+            <ul class="sildebar-son" >
+                <li><a href="#">用户下单设置</a></li>
+                <li><a href="#">首页封面设置</a></li>
+            </ul>
+            </li>
+
+
+
+          </ul>
+
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">总览</h1>
+
+        </div>
+      </div>
+      
+    </div>
+
+    <div style=" display:none;" class="content">
+        @RenderBody()
+    </div>
+    <script src="@Url.Content("~/Areas/Admin/Content/js/jquery-3.1.1.min.js")" ></script>
+    <script>
+        $(function () {
+            $(".nav-sidebar li").click(function () {
+                $(".nav-sidebar li").attr("class", "");
+                $(".sildebar-son").css("display", "none");
+                $(this).attr("class", "active").find(".sildebar-son").css("display", "block");
+
+            });
+
+
+        });
+    
+    </script>
+    @RenderSection("Js", false)
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "积分兑换";
+}
+
+@section CSS{
+   <link rel="stylesheet/less" type="text/css" href="@Url.Content("~/Content/src/page/User-Point.less?1")" />
+}
+
+<div class="topbar-return">
+        <div class="btn-left">
+            <a href="@Url.Action("Index","Main")"> <img src="@Url.Content("~/Content/img/返回.png")" /></a>
+        </div>
+        积分兑换
+</div>
+
+<div style=" height:1px;"></div>
+
+<div class="item">
+  注意：请出示二维码到餐厅指定地点兑换商品。
+</div>
+
+<div class="item-qcode" >
+    <img style=" margin-left:auto; margin-right:auto; max-width:100%;" src="@Url.Content("~/Content/img/User/QCode.png")" />
+</div>
+
+

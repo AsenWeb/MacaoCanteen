@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "餐厅点评";
+}
+@section Css{
+    <link rel="stylesheet/less" type="text/css" href="@Url.Content("~/Content/src/page/Review.less")" />
+}
+
+
+<div class="topbar-return">
+        <div class="btn-left">
+            <a href="@Url.Action("Index","Main")"> <img src="@Url.Content("~/Content/img/返回.png")" /></a>
+        </div>
+        餐厅点评
+</div>
+
+<div style=" height:8px;"></div>
+
+<div class="item-review">
+    
+    <img class="pic" style=" "  width="40"  src="@Url.Content("~/Content/img/pic.jpg")" />
+    <div class="gray" style=" ">吖森：</div>
+    <div>餐品还可以.</div>
+    <div class="start" >
+        <img  width="18"  src="@Url.Content("~/Content/img/Review/评价星星-黄.png")" />
+        <img  width="18"  src="@Url.Content("~/Content/img/Review/评价星星-黄.png")" />
+        <img  width="18"  src="@Url.Content("~/Content/img/Review/评价星星-黄.png")" /> 
+        <img  width="18"  src="@Url.Content("~/Content/img/Review/评价星星-黄.png")" />
+        <img  width="18"  src="@Url.Content("~/Content/img/Review/评价星星.png")" />
+    </div>
+    <div class="time">10分钟前</div>
+</div>
+
+
+<div style=" height:40px;"></div>
+
+<a href="@Url.Action("AddReview","Review")">
+<div class="btn-sure">
+
+    我也要点评
+    <img width="20" src="@Url.Content("~/Content/img/Review/评价.png")" />
+   
+</div>
+ </a>
+
+
+

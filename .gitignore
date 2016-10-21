@@ -1,0 +1,7 @@
+Web/MacaoCanteen/MacaoCanteen.Publish
+
+
+
+Web/MacaoCanteen/BootStrap/*
+!Web/MacaoCanteen/BootStrap/
+dist/

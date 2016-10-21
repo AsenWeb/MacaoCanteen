@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "AddReview";
+}
+
+@section Css{
+    <link rel="stylesheet/less" type="text/css" href="@Url.Content("~/Content/src/page/Review-Add.less")" />
+}
+
+<div class="topbar-return">
+        <div class="btn-left">
+            <a href="@Url.Action("Index","Main")"> <img src="@Url.Content("~/Content/img/返回.png")" /></a>
+        </div>
+        我要点评
+</div>
+
+
+<div class="item-input">
+<div style=" height:8px;"></div>
+<div class="rvplane" >
+    <textarea rows="5" style=" ">评论不能小于5个字或大于50个字..</textarea>
+
+</div>
+
+<div class="start">
+        <img  width="25"  src="@Url.Content("~/Content/img/Review/评价星星-黄.png")" />
+        <img  width="25"  src="@Url.Content("~/Content/img/Review/评价星星-黄.png")" />
+        <img  width="25"  src="@Url.Content("~/Content/img/Review/评价星星-黄.png")" /> 
+        <img  width="25"  src="@Url.Content("~/Content/img/Review/评价星星-黄.png")" />
+        <img  width="25"  src="@Url.Content("~/Content/img/Review/评价星星.png")" />
+
+</div>
+</div>
+
+<div style=" height:8px;"></div>
+
+<div class="btn-sure">
+    确认点评
+</div>
+
+
+
