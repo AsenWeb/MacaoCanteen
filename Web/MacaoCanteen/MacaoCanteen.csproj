@@ -84,10 +84,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\Content\css\page\master.css" />
+    <Content Include="Areas\Admin\Content\img\master\tou1.jpg" />
+    <Content Include="Areas\Admin\Content\img\master\tou2.jpg" />
+    <Content Include="Areas\Admin\Content\img\master\tou3.jpg" />
+    <Content Include="Areas\Admin\Content\img\master\tou4.jpg" />
+    <Content Include="Areas\Admin\Content\img\master\tou5.jpg" />
+    <Content Include="Areas\Admin\Content\img\master\堂食订单.png" />
+    <Content Include="Areas\Admin\Content\img\master\外卖订单.png" />
+    <Content Include="Areas\Admin\Content\img\master\金额.png" />
     <Content Include="Areas\Admin\Content\img\Pic.png" />
     <Content Include="Areas\Admin\Content\img\堂食订单.png" />
     <Content Include="Areas\Admin\Content\img\外卖.png" />
     <Content Include="Areas\Admin\Content\img\总览.png" />
+    <Content Include="Areas\Admin\Content\img\master\新增用户.png" />
     <Content Include="Areas\Admin\Content\img\用户.png" />
     <Content Include="Areas\Admin\Content\img\管理员.png" />
     <Content Include="Areas\Admin\Content\img\订单.png" />
@@ -99,7 +108,6 @@
     <Content Include="Areas\Admin\Views\UserControl\Menu.cshtml" />
     <Content Include="Areas\Admin\Views\UserControl\TopBar.cshtml" />
     <Content Include="Areas\Admin\Views\Master\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Main\Test.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <None Include="BootStrap\.editorconfig" />
     <None Include="BootStrap\.travis.yml" />
