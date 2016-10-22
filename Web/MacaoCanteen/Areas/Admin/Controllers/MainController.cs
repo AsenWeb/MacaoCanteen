@@ -13,7 +13,6 @@ namespace MacaoCanteen.Areas.Admin.Controllers
 
         public ActionResult Index()
         {
-            
             return View();
         }
 
