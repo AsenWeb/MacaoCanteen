@@ -2,7 +2,13 @@ Web/MacaoCanteen/MacaoCanteen.Publish
 
 
 
-Web/MacaoCanteen/BootStrap/node_modules
+Web
+/MacaoCanteen/BootStrap/node_modules
+Web/MacaoCanteen/bin
+Web/MacaoCanteen/bin
+Web/MacaoCanteen/Service/MacaoCanteenService/bin
+Web/MacaoCanteen/TicketPrint/bin
+
 
 # Ignore docs files
 _gh_pages
