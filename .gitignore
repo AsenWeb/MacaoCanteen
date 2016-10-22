@@ -5,9 +5,8 @@ Web/MacaoCanteen/MacaoCanteen.Publish
 Web
 /MacaoCanteen/BootStrap/node_modules
 Web/MacaoCanteen/bin
-Web/MacaoCanteen/bin
-Web/MacaoCanteen/Service/MacaoCanteenService/bin
-Web/MacaoCanteen/TicketPrint/bin
+MacaoCanteen/Service/MacaoCanteenService/bin
+MacaoCanteen/TicketPrint/bin
 
 
 # Ignore docs files
